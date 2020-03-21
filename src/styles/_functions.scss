@@ -1,0 +1,5 @@
+@import "./variables";
+
+@function gridUnits($factor) {
+  @return $factor * $grid-unit;
+}

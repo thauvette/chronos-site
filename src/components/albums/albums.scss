@@ -1,0 +1,44 @@
+@import "../../styles/config";
+
+.albums {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @include MQ(md) {
+    flex-direction: row;
+  }
+  .album {
+    text-decoration: none;
+    color: $black;
+    width: gridUnits(30);
+    box-shadow: 1px 2px 4pc rgba(0, 0, 0, 0.14);
+    border-radius: 0 0 4px 4px;
+    transition: all 0.65s ease;
+    &:not(:first-child) {
+      margin-top: gridUnits(4);
+    }
+    @include MQ(md) {
+      &:not(:first-child) {
+        margin-top: 0;
+        margin-left: gridUnits(4);
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+    .album-cover {
+      img {
+        margin: 0;
+      }
+    }
+    .album-details {
+      padding: gridUnits(2);
+      background-color: #eee;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
