@@ -1,6 +1,11 @@
 @import "./variables";
 
 @mixin MQ($canvas) {
+  @if $canvas == sm {
+    @media screen and ($min-width-sm) {
+      @content;
+    }
+  }
   @if $canvas == md {
     @media screen and ($min-width-md) {
       @content;

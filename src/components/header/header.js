@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import "./header.scss"
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -18,8 +18,15 @@ const Header = () => {
   return (
     <header>
       <div className="max-content-container header-inner">
-        <div className="image-container">
-          <Img sizes={data.headerImage.childImageSharp.sizes} />
+        <Link to="/">
+          <div className="image-container">
+            <Img sizes={data.headerImage.childImageSharp.sizes} />
+          </div>
+        </Link>
+        <div className="u-flex header-text-links">
+          <Link to="/">Music</Link>
+          <Link to="/videos">Videos</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </header>

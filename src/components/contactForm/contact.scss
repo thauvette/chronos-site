@@ -1,0 +1,65 @@
+@import "../../styles/config";
+
+form {
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: gridUnits(2);
+}
+
+.input-container {
+  padding: gridUnits(1) 0;
+  label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    span {
+      position: absolute;
+      padding-left: gridUnits(1);
+      top: gridUnits(1);
+      transition: all 0.33s ease;
+      opacity: 0;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    input,
+    textarea {
+      padding: 0;
+      transition: all 0.33s ease;
+      padding-left: gridUnits(1);
+      border: 1px solid rgba(0, 0, 0, 0.54);
+    }
+    input {
+      height: gridUnits(6);
+    }
+    textarea {
+      padding-top: gridUnits(1);
+      min-height: gridUnits(10);
+    }
+    &.has-value {
+      span {
+        transform: translate(0);
+        opacity: 1;
+        top: 0;
+      }
+      input {
+        padding-top: 14px;
+      }
+      textarea {
+        padding-top: gridUnits(2);
+      }
+    }
+  }
+
+  .error {
+    color: red;
+    font-style: italic;
+    font-size: 0.87rem;
+  }
+}
+
+.contact-success {
+  color: #fff;
+}

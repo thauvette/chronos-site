@@ -4,17 +4,43 @@ header {
   padding: gridUnits(4) 0;
 
   .header-inner {
+    display: flex;
+    flex-direction: column;
+
+    @include MQ(sm) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
     padding: 0 gridUnits(2);
 
     @include MQ(md) {
       padding: 0;
     }
-
+    a {
+      color: #efefef;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 0 gridUnits(2);
+      transition: all 0.25s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
     .image-container {
-      max-width: gridUnits(24);
+      width: gridUnits(24);
 
       img {
         margin-bottom: 0;
+      }
+    }
+
+    .header-text-links {
+      padding-top: gridUnits(2);
+      @include MQ(sm) {
+        padding-top: 0;
       }
     }
   }

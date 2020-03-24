@@ -22,7 +22,7 @@ const Albums = () => {
     }
   `)
   return (
-    <div className="albums max-content-container">
+    <div className="albums ">
       <a
         href="https://store.chronosmusic.ca/album/what-it-is"
         target="_blank"

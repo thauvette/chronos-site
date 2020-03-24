@@ -1,0 +1,19 @@
+@import "./functions";
+@import "./variables";
+
+.btn {
+  border: 1px solid;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: gridUnits(2);
+  transition: all 0.5s ease;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.btn-white {
+    border-color: #fff;
+    color: #fff;
+  }
+}
