@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { FormContext } from "../../context/formContext"
 import "./contact.scss"
+
 const ContactForm = () => {
   const {
     formValues,
@@ -37,7 +38,12 @@ const ContactForm = () => {
     )
   }
   return (
-    <form onSubmit={submitForm} netlify netlify-honeypot="bot-field">
+    <form
+      className="contact-form"
+      onSubmit={submitForm}
+      netlify
+      netlify-honeypot="bot-field"
+    >
       <div className={`input-container`}>
         <label className={formValues.email.value.length ? "has-value" : ""}>
           <span>Your Email</span>
