@@ -43,6 +43,7 @@ const ContactForm = () => {
       onSubmit={submitForm}
       netlify
       netlify-honeypot="bot-field"
+      name="contact"
     >
       <div className={`input-container`}>
         <label className={formValues.email.value.length ? "has-value" : ""}>
