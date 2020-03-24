@@ -39,7 +39,7 @@ function FormProvider({ children }) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact, ...values }),
+        body: encode({ "form-name": "contact", ...values }),
       })
         .then(() => {
           setFormSubmissionState({ loading: false, error: null, success: true })
